@@ -29,3 +29,31 @@ let book3 = {
 };
 
 console.log(book1, book2, book3);
+
+//- Створити 3 об'єкти які описують книги. Поля об'єкту : title ,pageCount, genre, authors. Поле "автори" - являється  масивом. Кожен автор має поля name та age.
+
+let book4 = {
+    title: "The Silent Symphony",
+    pageCount: 380,
+    genre: "Mystery Thriller",
+    authors: [ {name: "Emily Harper", age: 42}, 
+               {name: "Daniel Mitchell", age: 38} ]
+};
+
+let book5 = {
+    title: "Echoes of Eternity",
+    pageCount: 450,
+    genre: "Science Fiction",
+    authors: [ {name: "Jessica Turner", age: 35}, 
+               {name: "Ryan Anderson", age: 40} ]
+};
+
+let book6 = {
+    title: "Whispers in the Woods",
+    pageCount: 320,
+    genre: "Historical Fiction",
+    authors: [ {name: "Benjamin Hayes", age: 48}, 
+               {name: "Olivia Robinson", age: 37} ]
+};
+
+console.log(book4, book5, book6);
