@@ -18,3 +18,33 @@ for (let pixel of img.values()) {
 }
 
 print(img);
+
+let image = new SimpleImage("chapel.png");
+
+for (let pixel of image.values()) {
+    if (pixel.getRed() !== 255) {
+        pixel.setRed(255);
+    }
+}
+
+print(image);
+
+let image = new SimpleImage("chapel.png");
+
+for (let pixel of image.values()) {
+    if (pixel.getRed() !== 0) {
+        pixel.setRed(0);
+    }
+}
+
+print(image);
+
+let image = new SimpleImage("eastereggs.jpg");
+
+for (let pixel of image.values()) {
+    if (pixel.getRed() > 70) {
+        pixel.setRed(70);
+    }
+}
+
+print(image);
