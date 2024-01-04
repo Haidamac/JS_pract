@@ -60,3 +60,15 @@ for (let pixel of image.values()) {
 }
 
 print(image);
+
+let image = new SimpleImage("chapel.jpg");
+
+for (let pixel of image.values()) {
+    if (pixel.getX() <= 50 && pixel.getY() <= 50) {
+        pixel.setRed(0);
+        pixel.setGreen(255);
+        pixel.setBlue(0);
+    }
+}
+
+print(image);
