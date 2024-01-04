@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 // change color
-var img = new SimpleImage(200,200);
+let img = new SimpleImage(200,200);
 
 for (let pixel of img.values()) {
     let NewRed = pixel.getRed() + 255;
@@ -44,6 +44,18 @@ let image = new SimpleImage("eastereggs.jpg");
 for (let pixel of image.values()) {
     if (pixel.getRed() > 70) {
         pixel.setRed(70);
+    }
+}
+
+print(image);
+
+let image = new SimpleImage("astrachan.jpg");
+
+for (let pixel of image.values()) {
+    if (pixel.getY() >= image.getHeight() - 10) {
+        pixel.setRed(0);
+        pixel.setGreen(0);
+        pixel.setBlue(0);
     }
 }
 
