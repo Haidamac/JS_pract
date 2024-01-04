@@ -72,3 +72,21 @@ for (let pixel of image.values()) {
 }
 
 print(image);
+
+function topRightCorner(cornerWidth, cornerHeight, image, red, green, blue) {
+    for (let pixel of image.values()) {
+        if (pixel.getX() >= image.getWidth() - cornerWidth && pixel.getY() <= cornerHeight) {
+            pixel.setRed(red);
+            pixel.setGreen(green);
+            pixel.setBlue(blue);
+        }
+    }
+}
+
+let image = new SimpleImage("chapel.png");
+topRightCorner(30, 60, image, 255, 255, 0);
+print(image);
+
+let image2 = new SimpleImage("smalllion.jpg");
+topRightCorner(125, 20, image2, 255, 0, 0);
+print(image2);
