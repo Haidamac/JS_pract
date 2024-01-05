@@ -90,3 +90,25 @@ print(image);
 let image2 = new SimpleImage("smalllion.jpg");
 topRightCorner(125, 20, image2, 255, 0, 0);
 print(image2);
+
+function changeRed(width, height) {
+    let picture = new SimpleImage(width, height);
+    let red = 0;
+ 
+    for (let pixel of picture.values()) {
+        pixel.setRed(red);
+        pixel.setGreen(0);
+        pixel.setBlue(0);
+        
+        red++;
+        
+        if (red > 255) {
+            red = 0;
+        }
+    }
+ 
+ return picture;
+}
+
+var result = changeRed(256,200);
+print(result);
