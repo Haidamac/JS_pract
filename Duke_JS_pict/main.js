@@ -112,3 +112,18 @@ function changeRed(width, height) {
 
 var result = changeRed(256,200);
 print(result);
+
+function changeGreenToYellow(width, height) {
+    let picture = new SimpleImage(width, height);
+
+    for (let pixel of picture.values()) {
+        pixel.setGreen(255);
+        pixel.setRed(pixel.getX() * (255 / width));
+        pixel.setBlue(0);
+    }
+
+    return picture;
+}
+
+var result = changeGreenToYellow(256, 200);
+print(result);
