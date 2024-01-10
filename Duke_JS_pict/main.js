@@ -127,3 +127,46 @@ function changeGreenToYellow(width, height) {
 
 var result = changeGreenToYellow(256, 200);
 print(result);
+
+let image = new SimpleImage("hilton.jpg");
+let w = image.getWidth();
+let r = w/3;
+let g = w/3 + r;
+
+for (let pixel of image.values()) {
+    if (pixel.getX() <= r) {
+        pixel.setRed(255);
+    } else if (pixel.getX() > r && pixel.getX() <= g) {
+        pixel.setGreen(255);
+    } else {pixel.setBlue(255);}
+}
+
+print(image);
+
+function swapRedGreen(pixel) {
+    let red = pixel.getRed();
+    let green = pixel.getGreen();
+    pixel.setRed(green);
+    pixel.setGreen(red);
+}
+
+let image = new SimpleImage("smallhands.png");
+
+for (let pixel of image.values()) {
+    swapRedGreen(pixel);
+}
+
+print(image);
+
+let image = new SimpleImage("duke_blue_devil.png");
+
+for (let pixel of image.values()) {
+    r = pixel.getRed();
+    if (r === 0) {
+        pixel.setBlue(0);
+        pixel.setRed(255);
+        pixel.setGreen(255);
+    }
+}
+
+print(image);
